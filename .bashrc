@@ -1,0 +1,50 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+export HISTSIZE=5000
+export HISTFILESIZE=5000
+export HISTCONTROL=ignoredups
+
+alias sysinfo='uname -som; uptime; free -h'
+alias ls='ls --color=auto'
+alias e='emacs -nw'
+alias feh='feh -F'
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Prompt
+GREEN="$(tput setaf 2)"
+RESET="$(tput sgr0)"
+iamintotmux(){
+	if [[ $TMUX ]]; then
+		echo 'tmux@'
+	else
+		echo ''
+	fi
+}
+bold=$(tput bold)
+rev=$(tput rev)
+green=$(tput setaf 2)
+cyan=$(tput setaf 6)
+white=$(tput setaf 7)
+normal=$(tput sgr0)
+
+#PS1='${GREEN}[\u@$(iamintotmux) \W]\$${RESET} '
+export PS1="\[${bold}\]\[$cyan\][$(iamintotmux)\W]\$ \[${normal}\]"
+
+# Key bindings
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+bind '"\eOc":forward-word'
+bind '"\eOd":backward-word'
+
+function homestead() {
+    ( cd ~/Homestead && vagrant $* )
+}
+
+PATH="${PATH}:$HOME/bin:$HOME/go/bin"
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export STUDIO_JDK="/usr/lib/jvm/java-8-openjdk"

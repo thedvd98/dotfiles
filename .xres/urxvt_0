@@ -1,0 +1,20 @@
+#include "solarized.light"
+#define myfontsize 10
+#define myfont xft:Terminus:medium:size=myfontsize
+!#define myfont xft:TerminessTTF Nerd Font:size=myfontsize:antialias=false
+#define mypadding 10
+
+! Scrollbar
+URxvt*scrollBar: false
+
+URxvt*font: myfont:style=Regular
+URxvt*boldFont: myfont:style=Bold
+URxvt*italicFont: myfont:style=Italic
+URxvt*boldItalicFont: myfont:style=Bold Italic
+URxvt*internalBorder: mypadding
+
+!URxvt.letterSpace: -1
+
+urxvt*perl-ext-common:        default,matcher
+urxvt*url-launcher:        /usr/bin/firefox
+urxvt*matcher.button:        1

@@ -1,0 +1,6 @@
+set statusbar-home-tilde true
+set default-bg "#fdf6e3"
+set statusbar-bg "#fdf6e3"
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+

@@ -22,11 +22,13 @@ local colors = {
 	['base0E'] = '#6c71c4',
 	['base0F'] = '#d33682',
 	['lightgrey'] = '#cccccc',
+	['black'] = '#000000',
 }
 
 lexers.colors = colors
 
-local fg = ',fore:'..colors.base05..','
+--local fg = ',fore:'..colors.base05..','
+local fg = ',fore:'..colors.black..','
 local bg = ',back:'..colors.base00..','
 
 lexers.STYLE_DEFAULT = bg..fg

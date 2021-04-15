@@ -5,4 +5,7 @@ reload-threads 2
 
 macro v set browser "mpv %u" ; open-in-browser ; set browser "elinks %u"
 
-
+bind-key j next
+bind-key k prev
+bind-key l open
+bind-key h quit

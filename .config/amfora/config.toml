@@ -42,7 +42,7 @@ search = "gemini://gus.guru/search"
 color = true
 
 # Whether ANSI color codes from the page content should be rendered
-ansi = true
+ansi = false
 
 # Whether to replace list asterisks with unicode bullets
 bullets = true
@@ -72,7 +72,7 @@ emoji_favicons = false
 
 # When a scrollbar appears. "never", "auto", and "always" are the only valid values.
 # "auto" means the scrollbar only appears when the page is longer than the window.
-scrollbar = "auto"
+scrollbar = "never"
 
 
 [auth]
@@ -312,10 +312,6 @@ entries_per_page = 20
 #   bkmk = bookmark
 #   modal = a popup window/box in the middle of the screen
 
-# EXAMPLES:
-# hdg_1 = "green"
-# hdg_2 = "#5f0000"
-
 # Available keys to set:
 
 # bg: background for pages, tab row, app in general
@@ -324,7 +320,15 @@ entries_per_page = 20
 # bottombar_label: The color of the prompt that appears when you press space
 # bottombar_text: The color of the text you type
 # bottombar_bg
-# scrollbar: The scrollbar that appears on the right for long pages
+
+#bg =            "#FCF6E3"
+bg =            "#FDF6E3"
+fg =            "#5A6E75"
+tab_num =       "#3889D2"
+tab_divider =       "#EDE8D5"
+bottombar_bg =      "#EDE8D5"
+bottombar_text =    "#5A6E75"
+bottombar_label =   "#3ea197"
 
 # hdg_1
 # hdg_2
@@ -337,31 +341,43 @@ entries_per_page = 20
 # preformatted_text
 # list_text
 
+hdg_1 =         "#3EA197"
+hdg_2 =         "#3889D2"
+hdg_3 =         "#6D6EC4"
+amfora_link =       "#5A6E75"
+foreign_link =      "#677B83"
+link_number =       "#CC3283"
+regular_text =      "#0F3642"
+quote_text =        "#0F3642"
+preformatted_text = "#0F3642"
+list_text =     "#0F3642"
+
 # btn_bg: The bg color for all modal buttons
 # btn_text: The text color for all modal buttons
 
-# dl_choice_modal_bg
-# dl_choice_modal_text
-# dl_modal_bg
-# dl_modal_text
-# info_modal_bg
-# info_modal_text
-# error_modal_bg
-# error_modal_text
-# yesno_modal_bg
-# yesno_modal_text
-# tofu_modal_bg
-# tofu_modal_text
-# subscription_modal_bg
-# subscription_modal_text
+btn_bg =        "#3889D2"
+btn_text =      "#FCF6E3"
 
-# input_modal_bg
-# input_modal_text
-# input_modal_field_bg: The bg of the input field, where you type the text
-# input_modal_field_text: The color of the text you type
+dl_choice_modal_bg =    "#EDE8D5"
+dl_choice_modal_text =  "#0F3642"
+dl_modal_bg =       "#EDE8D5"
+dl_modal_text =     "#0F3642"
+info_modal_bg =     "#EDE8D5"
+info_modal_text =   "#0F3642"
+error_modal_bg =    "#EDE8D5"
+error_modal_text =  "#D53234"
+yesno_modal_bg =    "#EDE8D5"
+yesno_modal_text =  "#0F3642"
+tofu_modal_bg =     "#EDE8D5"
+tofu_modal_text =   "#0F3642"
 
-# bkmk_modal_bg
-# bkmk_modal_text
-# bkmk_modal_label
-# bkmk_modal_field_bg
-# bkmk_modal_field_text
+input_modal_bg =    "#EDE8D5"
+input_modal_text =  "#0F3642"
+input_modal_field_bg =  "#FCF6E3"
+input_modal_field_text ="#0F3642"
+
+bkmk_modal_bg =     "#EDE8D5"
+bkmk_modal_text =   "#0F3642"
+bkmk_modal_label =  "#3ea197"
+bkmk_modal_field_bg =   "#FCF6E3"
+bkmk_modal_field_text = "#0F3642"

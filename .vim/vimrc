@@ -18,6 +18,8 @@ let g:lisp_rainbow=1
 "syntax enable
 set background=light
 colorscheme solarized
+syntax off
+highlight Normal ctermfg=Black
 
 set mouse=a
 set autowrite
@@ -33,3 +35,11 @@ set shiftwidth=4
 " Buffer switching
 nnoremap <silent> <C-h> :bprevious<CR>
 nnoremap <silent> <C-l> :bnext<CR>
+
+"copy paste
+vmap <C-S-c> "+y
+vmap <C-S-V> "+p
+vmap <C-c> "+y
+map <C-v> "+p
+vmap <C-v> "+p"
+imap <C-v> <ESC>"+pi

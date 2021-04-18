@@ -9,6 +9,7 @@ alias sysinfo='uname -som; uptime; free -h'
 alias ls='ls --color=auto'
 alias e='emacs -nw'
 alias feh='feh -F'
+alias csi='chicken-csi -q'
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
@@ -30,7 +31,7 @@ white=$(tput setaf 7)
 normal=$(tput sgr0)
 
 #PS1='${GREEN}[\u@$(iamintotmux) \W]\$${RESET} '
-export PS1="\[${bold}\]\[$cyan\][$(iamintotmux)\W]\$ \[${normal}\]"
+export PS1="\[${bold}\]\[$cyan\][$(iamintotmux)\W]\[${normal}\]λ "
 
 # Key bindings
 bind '"\e[A": history-search-backward'

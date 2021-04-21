@@ -13,6 +13,13 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 let g:slimv_swank_cmd = '! tmux new -d -n REPL-SBCL "sbcl --load /home/thedvd98/.vim/plugged/slimv/slime/start-swank.lisp"'
+"let g:slimv_swank_cmd = '! tmux new -d -n REPL-CSI "chicken-csi -q /home/thedvd98/.vim/plugged/slimv/slime/contrib/swank-mit-scheme.scm"'
+"let g:slimv_swank_scheme = '! tmux new -d -n REPL-CSI "chicken-csi -q /home/thedvd98/.vim/plugged/slimv/slime/contrib/swank-r6rs.scm"'
+if &filetype ==# 'scheme'
+elseif &filetype ==# 'lisp'
+endif
+
+
 let g:lisp_rainbow=1
 "filetype plugin indent on " automatacamente eseguito da plug#end()
 "syntax enable

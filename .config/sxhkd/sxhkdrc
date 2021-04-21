@@ -19,8 +19,9 @@ super + shift + @s
 	scrot "%Y-%m-%d_%H-%M-%S.png" -s -e 'mv $f ~/img/screenshots/'
 # terminal emulator
 super + Return
+	st
+super + shift + Return
 	urxvt
-
 # program launcher
 super + @d
 	dmenu_run

@@ -11,7 +11,7 @@ alias e='emacs -nw'
 alias feh='feh -F'
 alias csi='chicken-csi -q'
 alias radio='mpv http://cyberadio.pw:8000/stream'
-alias alpine='qemu-system-x86_64 -enable-kvm -m 512 -nic user,hostfwd=tcp::22-:22 -hda ~/qemu/alpine.qcow2'
+alias alpine='qemu-system-x86_64 -enable-kvm -m 512 -nic user,hostfwd=tcp::10022-:22 -hda ~/qemu/alpine.qcow2'
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 

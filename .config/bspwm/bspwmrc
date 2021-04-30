@@ -3,7 +3,7 @@
 urxvtd &
 sxhkd &
 xsetroot -cursor_name left_ptr &
-feh --bg-center ~/img/walls/fightuntilwedie.jpg &
+feh --bg-center ~/img/walls/code_compile_run.png &
 polybar example &
 
 bspc monitor -d α β γ δ

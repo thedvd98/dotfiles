@@ -1,8 +1,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export HISTSIZE=5000
-export HISTFILESIZE=5000
+export HISTSIZE=0
+export HISTFILESIZE=0
 export HISTCONTROL=ignoredups
 
 alias sysinfo='uname -som; uptime; free -h'
@@ -40,10 +40,6 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 bind '"\eOc":forward-word'
 bind '"\eOd":backward-word'
-
-function homestead() {
-    ( cd ~/Homestead && vagrant $* )
-}
 
 PATH="${PATH}:$HOME/bin:$HOME/go/bin"
 

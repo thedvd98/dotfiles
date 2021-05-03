@@ -1,7 +1,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export HISTSIZE=0
+export HISTSIZE=10
 export HISTFILESIZE=0
 export HISTCONTROL=ignoredups
 
@@ -46,4 +46,5 @@ PATH="${PATH}:$HOME/bin:$HOME/go/bin"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_DESKTOP_DIR="$HOME/"
 export STUDIO_JDK="/usr/lib/jvm/java-8-openjdk"

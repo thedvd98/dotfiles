@@ -23,9 +23,10 @@ let g:slimv_swank_cmd = '! tmux new -d -n REPL-SBCL "sbcl --load /home/thedvd98/
 let g:lisp_rainbow=1
 "filetype plugin indent on " automatacamente eseguito da plug#end()
 "syntax enable
-set background=light
-colorscheme solarized
-highlight Normal ctermfg=Black
+"set background=light
+"colorscheme solarized
+"highlight Normal ctermfg=Black
+syntax off
 
 set mouse=a
 set autowrite
@@ -46,9 +47,12 @@ nnoremap <silent> <C-l> :bnext<CR>
 vmap <C-S-c> "+y
 vmap <C-S-V> "+p
 vmap <C-c> "+y
-map <C-v> "+p
-vmap <C-v> "+p"
-imap <C-v> <ESC>"+pi
+"map <C-v> "+p
+"vmap <C-v> "+p"
+"imap <C-v> <ESC>"+pi
+
+map K {
+map J }
 
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"

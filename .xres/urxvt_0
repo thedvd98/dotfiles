@@ -1,4 +1,4 @@
-#include "solarized.light"
+#include "solarized.dark"
 #define myfontsize 10
 #define myfont xft:Terminus:medium:size=myfontsize
 !#define myfont xft:TerminessTTF Nerd Font:size=myfontsize:antialias=false

@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 	Plug 'lervag/vimtex'
-	Plug 'kovisoft/slimv'
+	Plug 'jpalardy/vim-slime'
+	
 	let g:tex_flavor='latex'
 	let g:vimtex_view_method='zathura'
 	let g:vimtex_quickfix_mode=0
@@ -8,25 +9,20 @@ call plug#begin('~/.vim/plugged')
 	let g:tex_conceal='abdmg'
 	let g:vimtex_compiler_latexmk = {
 		\ 'build_dir' : 'pdf',
-		\}
+	\}
 
 call plug#end()
 
-let g:slimv_swank_cmd = '! tmux new -d -n REPL-SBCL "sbcl --load /home/thedvd98/.vim/plugged/slimv/slime/start-swank.lisp"'
-"let g:slimv_swank_cmd = '! tmux new -d -n REPL-CSI "chicken-csi -q /home/thedvd98/.vim/plugged/slimv/slime/contrib/swank-mit-scheme.scm"'
-"let g:slimv_swank_scheme = '! tmux new -d -n REPL-CSI "chicken-csi -q /home/thedvd98/.vim/plugged/slimv/slime/contrib/swank-r6rs.scm"'
-"if &filetype ==# 'scheme'
-"elseif &filetype ==# 'lisp'
-"endif
+let g:is_chicken = 1
+
+let g:slime_target = "tmux"
 
 
-let g:lisp_rainbow=1
 "filetype plugin indent on " automatacamente eseguito da plug#end()
 "syntax enable
-"set background=light
+set background=dark
 "colorscheme solarized
 "highlight Normal ctermfg=Black
-syntax off
 
 set mouse=a
 set autowrite
@@ -50,9 +46,6 @@ vmap <C-c> "+y
 "map <C-v> "+p
 "vmap <C-v> "+p"
 "imap <C-v> <ESC>"+pi
-
-map K {
-map J }
 
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"

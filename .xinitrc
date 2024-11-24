@@ -5,3 +5,4 @@ setxkbmap -model pc105 -layout us -option ctrl:nocaps,compose:ralt &
 autocutsel -fork &
 autocutsel -fork -selection PRIMARY &
 exec startxfce4
+#exec fvwm2

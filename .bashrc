@@ -1,18 +1,27 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export HISTSIZE=10
-export HISTFILESIZE=0
+export HISTSIZE=10000
+export HISTFILESIZE=10000
 export HISTCONTROL=ignoredups
 
+export EDITOR="nvim"
+
+export CHECK_IF_PREINSTALLED=false
+
+export QT_XCB_GL_INTEGRATION=none # Used for solving some nix pkg installed programs problems
+
 alias sysinfo='uname -som; uptime; free -h'
+alias redshift='redshift -l   42.83333:12.83333'
 alias ls='ls --color=auto'
-alias e="emacsclient --socket-name=/tmp/emacs$(id -u)/server -nw"
+alias e="emacsclient -c --socket-name=/tmp/emacs$(id -u)/server"
 alias feh='feh -F'
-alias csi='csi -q'
+#alias csi='csi -q'
 alias alpine='qemu-system-x86_64 -enable-kvm -m 512 -nic user,hostfwd=tcp::10022-:22 -hda ~/qemu/alpine.qcow2'
 alias gentoo_upgrade='doas emerge --ask --verbose --update --deep --changed-use @world'
-alias did='vim -c "$ r !date" ~/src/fatto.txt'
+alias did='nvim -c "$ r !date" ~/src/fatto.txt'
+alias bap-env='nix-shell -p ocamlPackages.bap'
+alias scrcpy='scrcpy --render-driver=software'
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
@@ -42,7 +51,6 @@ bind '"\e[B": history-search-forward'
 bind '"\eOc":forward-word'
 bind '"\eOd":backward-word'
 
-PATH="${PATH}:$HOME/bin:$HOME/go/bin:$HOME/.local/bin"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -59,7 +67,7 @@ PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 
 
 export YARA_INDEX="$HOME/var/yara/rules/index.yar"
+export YARA_FULL="$HOME/var/yara/yara-rules-full.yar"
 
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# gcc useful flags -Wall -Wextra -Wshadow -Wconversion -Wfloat-equal -Wduplicated-cond -Wlogical-op
+. "$HOME/.cargo/env"

@@ -16,6 +16,7 @@ vim.opt.expandtab = true
 -- vim.cmd "colorscheme retrobox"
 -- using [[]] is useful when inside the string there are apices and other special characheters
 vim.cmd [[colorscheme retrobox]]
+-- vim.cmd("syntax off")
 
 -- Highlight when yanking text
 -- :help vim.highlight.on_yank()
@@ -27,3 +28,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- vim.cmd('set verbosefile=~/.config/nvim/log.txt | set verbose=10')

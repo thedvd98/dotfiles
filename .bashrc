@@ -38,7 +38,7 @@ white=$(tput setaf 7)
 normal=$(tput sgr0)
 
 #PS1='${GREEN}[\u@$(iamintotmux) \W]\$${RESET} '
-export PS1="\[${bold}\]\[$cyan\]$(iamintotmux)\W \[${normal}\]λ "
+export PS1="\[${bold}\]\[$green\][$(hostname)] \[$cyan\]$(iamintotmux)\W \[${normal}\]λ "
 
 # Key bindings
 bind '"\e[A": history-search-backward'

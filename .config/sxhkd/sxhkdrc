@@ -19,7 +19,7 @@ super + shift + @s
 	scrot "%Y-%m-%d_%H-%M-%S.png" -s -e 'mv $f ~/img/screenshots/'
 # terminal emulator
 super + Return
-	st
+	xfce4-terminal
 super + shift + Return
 	urxvt
 # program launcher
@@ -87,6 +87,9 @@ super + {_,shift + }c
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+super + ctrl + {Left,Right}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop

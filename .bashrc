@@ -73,5 +73,11 @@ export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
 export YARA_INDEX="$HOME/var/yara/rules/index.yar"
 export YARA_FULL="$HOME/var/yara/yara-rules-full.yar"
 
+# FZF
+
+export FZF_ALT_C_OPTS="
+  --walker-skip mnt
+  --preview 'tree -C {}'"
+
 # gcc useful flags -Wall -Wextra -Wshadow -Wconversion -Wfloat-equal -Wduplicated-cond -Wlogical-op
 . "$HOME/.cargo/env"

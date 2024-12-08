@@ -21,6 +21,7 @@ bspc config gapless_monocle      true
 
 bspc rule -a Gimp desktop='^4' state=floating follow=on
 bspc rule -a qbittorent desktop='^4' state=floating follow=on
+bspc rule -a qBittorent desktop='^4' state=floating follow=on
 bspc rule -a Chromium desktop='^3'
 bspc rule -a librewolf desktop='^3'
 bspc rule -a firefox desktop='^3'

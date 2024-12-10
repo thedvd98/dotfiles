@@ -81,3 +81,5 @@ export FZF_ALT_C_OPTS="
 
 # gcc useful flags -Wall -Wextra -Wshadow -Wconversion -Wfloat-equal -Wduplicated-cond -Wlogical-op
 . "$HOME/.cargo/env"
+
+source /usr/share/bash-completion/completions/fzf

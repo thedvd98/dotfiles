@@ -18,7 +18,8 @@ super + v
 	mpv $(xclip -o)
 
 super + shift + @s
-	scrot "%Y-%m-%d_%H-%M-%S.png" -s -e 'mv $f ~/img/screenshots/'
+    ~/bin/screenshot.sh
+
 # terminal emulator
 super + Return
 	xfce4-terminal

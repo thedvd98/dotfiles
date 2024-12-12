@@ -4,7 +4,7 @@ return {
     config = function()
         local configs = require("nvim-treesitter.configs")
         configs.setup({
-            ensure_installed = { 'bash', 'c', 'cpp', 'diff', 'html', 'lua', 'luadoc', 'yaml', 'typescript', 'javascript', 'ocaml', 'toml', 'strace', 'make', 'latex', 'llvm'},
+            ensure_installed = { 'bash', 'c', 'cpp', 'diff', 'html', 'lua', 'luadoc', 'yaml', 'typescript', 'javascript', 'ocaml', 'toml', 'strace', 'make', 'latex', 'llvm', 'scheme'},
             auto_install = true,
             sync_install = false,
             ignore_install = { 'ruby' },

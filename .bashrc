@@ -17,6 +17,7 @@ alias csi='csi -q'
 alias alpine='qemu-system-x86_64 -enable-kvm -m 512 -nic user,hostfwd=tcp::10022-:22 -hda ~/qemu/alpine.qcow2'
 alias did='nvim -c "$ r !date" ~/src/fatto.txt'
 alias scrcpy='scrcpy --render-driver=software'
+alias my='cd $(find ~/src/miei/ -maxdepth 1 -type d | fzf)'
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
@@ -38,7 +39,7 @@ white=$(tput setaf 7)
 normal=$(tput sgr0)
 
 #PS1='${GREEN}[\u@$(iamintotmux) \W]\$${RESET} '
-export PS1="\[${bold}\]\[$green\][$(hostname)] \[$cyan\]$(iamintotmux)\W \[${normal}\]λ "
+export PS1="\[${bold}\]\[$green\][$(hostname)] \[$cyan\]\W \[${normal}\]λ "
 
 # Key bindings
 bind '"\e[A": history-search-backward'

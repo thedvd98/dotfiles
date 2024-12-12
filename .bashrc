@@ -21,6 +21,9 @@ alias my='cd $(find ~/src/miei/ -maxdepth 1 -type d | fzf)'
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+# Kubernetes!
+alias kubectl='minikube kubectl --'
+
 # Prompt
 GREEN="$(tput setaf 2)"
 RESET="$(tput sgr0)"

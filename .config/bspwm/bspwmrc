@@ -25,6 +25,7 @@ bspc rule -a qBittorent desktop='^4' state=floating follow=on
 bspc rule -a Chromium desktop='^3'
 bspc rule -a librewolf desktop='^3'
 bspc rule -a firefox desktop='^3'
+bspc rule -a firefox-esr desktop='^3'
 bspc rule -a mplayer2 desktop='^2' state=floating
 bspc rule -a mpv desktop='^2' state=floating follow=on
 bspc rule -a Kupfer.py focus=on

@@ -25,3 +25,5 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+setxkbmap -model pc105 -layout us -option ctrl:nocaps,compose:ralt

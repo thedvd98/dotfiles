@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-function volume()
+function volume ()
 {
     for SINK in $(pacmd list-sinks | grep 'index:' | cut -b12-)
     do

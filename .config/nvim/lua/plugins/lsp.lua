@@ -1,9 +1,16 @@
 return {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
+    lazy = true,
+    event = {"BufReadPre", "BufNewFile"},
     dependencies = {
         -- Automatically install LSPs and related tools to stdpath for Neovim
-        { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
+        {
+            'williamboman/mason.nvim',
+            config = true ,
+            lazy = true,
+            cmd = {"Mason", "MasonInstall", "MasonInstallAll", "MasonUninstall", "MasonUninstallAll", "MasonLog"},
+        }, -- NOTE: Must be loaded before dependants
         'williamboman/mason-lspconfig.nvim',
         'WhoIsSethDaniel/mason-tool-installer.nvim',
 

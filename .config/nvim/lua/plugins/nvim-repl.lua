@@ -7,6 +7,7 @@ return {
             python = "python3",
             ocaml = "ocaml",
             sh = "sh",
+            csi = "csi",
             vim = "nvim --clean -ERM",
         }
     end,

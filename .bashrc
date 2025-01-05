@@ -54,6 +54,8 @@ export HISTSIZE=10000
 export HISTFILESIZE=10000
 export HISTCONTROL=ignoredups
 
+export PROMPT_COMMAND="history -a; history -n"
+
 export EDITOR="nvim"
 export VISUAL="nvim"
 

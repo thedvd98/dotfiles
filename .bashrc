@@ -13,7 +13,7 @@ alias sysinfo='uname -som; uptime; free -h'
 alias redshift='redshift -l   42.83333:12.83333'
 alias e="emacsclient -c --socket-name=/tmp/emacs$(id -u)/server"
 alias feh='feh -F'
-alias csi='csi -q'
+alias csi='csi'
 alias alpine='qemu-system-x86_64 -enable-kvm -m 512 -nic user,hostfwd=tcp::10022-:22 -hda ~/qemu/alpine.qcow2'
 alias did='nvim -c "$ r !date" ~/src/fatto.txt'
 alias scrcpy='scrcpy --render-driver=software'

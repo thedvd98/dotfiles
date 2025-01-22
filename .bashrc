@@ -15,11 +15,8 @@ alias e="emacsclient -c --socket-name=/tmp/emacs$(id -u)/server"
 alias feh='feh -F'
 alias csi='csi'
 alias alpine='qemu-system-x86_64 -enable-kvm -m 512 -nic user,hostfwd=tcp::10022-:22 -hda ~/qemu/alpine.qcow2'
-alias did='nvim -c "$ r !date" ~/src/fatto.txt'
 alias scrcpy='scrcpy --render-driver=software'
 alias my='cd $(find ~/src/miei/ -maxdepth 1 -type d | fzf)'
-
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Kubernetes!
 alias kubectl='minikube kubectl --'

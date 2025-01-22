@@ -1,5 +1,5 @@
-alias did='nvim +"normal Go" +"r !date +\%Y-\%m-\%d" ~/notes/did.txt'
-alias todo='nvim +"normal Go" ~/notes/todo.md'
+alias did='nvim +"normal Go" +"r !date +\%Y-\%m-\%d" ~/sync/notes/did.txt'
+alias todo='nvim +"normal Go" ~/sync/notes/todo.md'
 alias vim='nvim'
 
 alias ll='ls -l'

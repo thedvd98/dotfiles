@@ -16,7 +16,8 @@ alias feh='feh -F'
 alias csi='csi'
 alias alpine='qemu-system-x86_64 -enable-kvm -m 512 -nic user,hostfwd=tcp::10022-:22 -hda ~/qemu/alpine.qcow2'
 alias scrcpy='scrcpy --render-driver=software'
-alias my='cd $(find ~/src/miei/ -maxdepth 1 -type d | fzf)'
+alias my='cd "$(find ~/src/miei/ -maxdepth 1 -type d | fzf)"'
+alias notes='nvim "$(find ~/sync/notes/ -type f | fzf --preview "cat {}")"'
 
 # Kubernetes!
 alias kubectl='minikube kubectl --'
@@ -84,5 +85,7 @@ export FZF_ALT_C_OPTS="
 
 # gcc useful flags -Wall -Wextra -Wshadow -Wconversion -Wfloat-equal -Wduplicated-cond -Wlogical-op
 . "$HOME/.cargo/env"
+
+export PATH="${PATH}:$HOME/.local/bin/"
 
 source /usr/share/bash-completion/completions/fzf

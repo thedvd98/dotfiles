@@ -13,6 +13,9 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+-- Hide the Ex top banner
+vim.g.netrw_banner = 0
+
 -- vim.cmd "colorscheme retrobox"
 -- using [[]] is useful when inside the string there are apices and other special characheters
 vim.cmd [[colorscheme retrobox]]

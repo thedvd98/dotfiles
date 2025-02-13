@@ -18,7 +18,7 @@ vim.g.netrw_banner = 0
 
 -- vim.cmd "colorscheme retrobox"
 -- using [[]] is useful when inside the string there are apices and other special characheters
-vim.cmd [[colorscheme retrobox]]
+-- vim.cmd [[colorscheme retrobox]]
 -- vim.cmd("syntax off")
 
 -- Highlight when yanking text

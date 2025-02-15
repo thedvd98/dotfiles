@@ -4,6 +4,7 @@
 ;; Indicate which modules to import to access the variables
 ;; used in this configuration.
 (use-modules (gnu)
+             (gnu services virtualization)
              (nongnu packages linux)
              (nongnu system linux-initrd))
 (use-service-modules cups desktop networking ssh xorg)
@@ -40,22 +41,28 @@
   (services
     ;; This is the default list of services we
     ;; are appending to.
-    (cons* (service bluetooth-service-type)
-           (service gnome-desktop-service-type)
-           (set-xorg-configuration
-             (xorg-configuration
-               (keyboard-layout keyboard-layout)))
-           (modify-services 
-             %desktop-services
-             (guix-service-type config =>
-                                (guix-configuration
-                                  (inherit config)
-                                  (substitute-urls
-                                    (append (list "https://substitutes.nonguix.org")
-                                            %default-substitute-urls))
-                                  (authorized-keys
-                                    (append (list (local-file "./nonguix-signing-key.pub"))
-                                            %default-authorized-guix-keys)))))))
+    (cons* 
+      (service libvirt-service-type
+               (libvirt-configuration
+                 (unix-sock-group "libvirt")
+                 (tls-port "16555")))
+
+      (service bluetooth-service-type)
+      (service gnome-desktop-service-type)
+      (set-xorg-configuration
+        (xorg-configuration
+          (keyboard-layout keyboard-layout)))
+      (modify-services 
+        %desktop-services
+        (guix-service-type config =>
+                           (guix-configuration
+                             (inherit config)
+                             (substitute-urls
+                               (append (list "https://substitutes.nonguix.org")
+                                       %default-substitute-urls))
+                             (authorized-keys
+                               (append (list (local-file "./nonguix-signing-key.pub"))
+                                       %default-authorized-guix-keys)))))))
 
   (bootloader (bootloader-configuration
                 (bootloader grub-efi-bootloader)

@@ -84,8 +84,6 @@ export FZF_ALT_C_OPTS="
   --preview 'tree -C {}'"
 
 # gcc useful flags -Wall -Wextra -Wshadow -Wconversion -Wfloat-equal -Wduplicated-cond -Wlogical-op
-. "$HOME/.cargo/env"
 
 export PATH="${PATH}:$HOME/.local/bin/"
 
-source /usr/share/bash-completion/completions/fzf

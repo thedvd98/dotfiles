@@ -7,8 +7,17 @@ return {
         -- Automatically install LSPs and related tools to stdpath for Neovim
         {
             'williamboman/mason.nvim',
-            config = true ,
-            lazy = true,
+            opts = {
+                PATH = "append",
+                log_level = vim.log.levels.DEBUG,
+                ui = {
+                    icons = {
+                        package_installed = "✓",
+                        package_pending = "➜",
+                        package_uninstalled = "✗"
+                    }
+                }
+            },
             cmd = {"Mason", "MasonInstall", "MasonInstallAll", "MasonUninstall", "MasonUninstallAll", "MasonLog"},
         }, -- NOTE: Must be loaded before dependants
         'williamboman/mason-lspconfig.nvim',
@@ -197,7 +206,6 @@ return {
         --    :Mason
         --
         --  You can press `g?` for help in this menu.
-        require('mason').setup()
 
         -- You can add other tools here that you want Mason to install
         -- for you, so that they are available from within Neovim.

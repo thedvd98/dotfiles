@@ -35,12 +35,19 @@ iamintotmux(){
 bold=$(tput bold)
 rev=$(tput rev)
 green=$(tput setaf 2)
+yellow=$(tput setaf 3)
+blue=$(tput setaf 4)
+magenta=$(tput setaf 5)
 cyan=$(tput setaf 6)
 white=$(tput setaf 7)
 normal=$(tput sgr0)
 
 #PS1='${GREEN}[\u@$(iamintotmux) \W]\$${RESET} '
 export PS1="\[${bold}\]\[$green\][$(hostname)] \[$cyan\]\W \[${normal}\]λ "
+if [ -n "$GUIX_ENVIRONMENT" ]
+then
+    export PS1="\[${bold}\]\[$magenta\][guix-shell] \[$cyan\]\W \[${normal}\]$ "
+fi
 
 # Key bindings
 bind '"\e[A": history-search-backward'

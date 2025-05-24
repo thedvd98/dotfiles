@@ -1,0 +1,5 @@
+# vi: ft=bash
+# Thinkops
+#source /gnu/store/kajdllb1hqzgxp9am7abiv8i97xc5ha7-fzf-0.54.3/etc/bash_completion.d/fzf
+eval "$(fzf --bash)"
+

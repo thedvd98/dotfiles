@@ -86,4 +86,6 @@
                          (mount-point "/")
                          (device "/dev/mapper/cryptroot")
                          (type "ext4")
-                         (dependencies mapped-devices)) %base-file-systems)))
+                         (dependencies mapped-devices)) %base-file-systems))
+  (swap-devices (list (swap-space
+                        (target "/mnt/swapfile")))))

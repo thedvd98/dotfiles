@@ -47,6 +47,11 @@
                  (unix-sock-group "libvirt")
                  (tls-port "16555")))
 
+      (service pam-limits-service-type
+               (list
+                 (pam-limits-entry "*" 'both 'nofile 100000))) ;; Must be lower than the value in /proc/sys/fs/file-max
+
+
       (service bluetooth-service-type)
       (service gnome-desktop-service-type)
       (set-xorg-configuration

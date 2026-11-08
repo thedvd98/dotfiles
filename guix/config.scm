@@ -27,13 +27,14 @@
                   (comment "Anon")
                   (group "users")
                   (home-directory "/home/anon")
-                  (supplementary-groups '("wheel" "netdev" "audio" "video")))
+                  (supplementary-groups '("wheel" "netdev" "audio" "video" "libvirt")))
                 %base-user-accounts))
 
   ;; Packages installed system-wide.  Users can also install packages
   ;; under their own account: use 'guix search KEYWORD' to search
   ;; for packages and 'guix install PACKAGE' to install a package.
-  (packages (append (list (specification->package "vim"))
+  (packages (append (list (specification->package "vim")
+                          (specification->package "swtpm"))
                     %base-packages))
 
   ;; Below is the list of system services.  To search for available
@@ -42,8 +43,10 @@
     ;; This is the default list of services we
     ;; are appending to.
     (cons* 
+      (service virtlog-service-type)
       (service libvirt-service-type
                (libvirt-configuration
+                 (requirement '(dbus-system virtlogd))
                  (unix-sock-group "libvirt")
                  (tls-port "16555")))
 
